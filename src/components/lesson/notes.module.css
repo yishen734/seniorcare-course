@@ -1,0 +1,144 @@
+.section {
+  scroll-margin-top: 24px;
+  padding: 44px 0 12px;
+  border-top: 1px solid var(--line);
+}
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+.sectionNumber {
+  color: var(--brand);
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.english {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.sectionHeader h2 {
+  font-size: 27px;
+  margin: 3px 0 0;
+}
+.minutes {
+  margin-left: auto;
+  white-space: nowrap;
+  background: #eaf0f3;
+  color: #48616e;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 3px 9px;
+}
+.prose h3 {
+  margin: 30px 0 14px;
+  font-size: 20px;
+}
+.prose h4 {
+  margin: 22px 0 12px;
+  font-size: 17px;
+}
+.prose p {
+  line-height: 1.95;
+}
+.formula {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 12px 20px;
+  margin: 18px 0;
+  background: #f4f7f9;
+  border-radius: 8px;
+  font-size: 1.05em;
+}
+.formula :global(.katex-display) {
+  margin: 0.5em 0;
+}
+.note {
+  background: var(--soft);
+  border-left: 3px solid var(--brand);
+  padding: 18px 22px;
+  margin: 24px 0;
+  border-radius: 0 8px 8px 0;
+}
+.note > strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--brand-dark);
+}
+.note p:last-child {
+  margin-bottom: 0;
+}
+.warning {
+  background: #fff7e9;
+  border-color: #ac7129;
+}
+.warning > strong {
+  color: #83541a;
+}
+.tableScroll {
+  overflow-x: auto;
+  margin: 20px 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.tableScroll caption {
+  text-align: left;
+  padding: 12px 14px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.tableScroll td {
+  min-width: 85px;
+}
+.teaching {
+  margin: 28px 0;
+  padding: 22px 24px;
+  background: #f7f9fb;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 15px;
+}
+.teachingTitle {
+  font-weight: 650;
+  margin-bottom: 14px;
+  color: var(--brand-dark);
+}
+.teachingTitle span {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  margin-left: 12px;
+  font-weight: 400;
+}
+.transition {
+  color: var(--muted);
+  margin: 14px 0 0 !important;
+}
+@media (max-width: 600px) {
+  .sectionHeader {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .sectionHeader h2 {
+    font-size: 23px;
+  }
+  .sectionNumber {
+    font-size: 28px;
+  }
+  .minutes {
+    margin-left: 42px;
+  }
+  .teaching,
+  .note {
+    padding: 16px;
+  }
+  .formula {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+}

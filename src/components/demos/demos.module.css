@@ -1,0 +1,481 @@
+.demo {
+  border: 1px solid #b8cdcf;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.demo > figcaption {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: #eaf5f4;
+  color: var(--brand-dark);
+  font-size: 14px;
+  font-weight: 650;
+  padding: 14px 20px;
+  border-bottom: 1px solid #cadcdb;
+}
+.demo > figcaption > span {
+  font-weight: 400;
+  font-size: 12px;
+}
+.demoBody {
+  padding: 20px;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 14px 0;
+}
+.buttons small {
+  font-size: 11px;
+  color: var(--muted);
+}
+.buttons button[aria-pressed='true'],
+.primary {
+  background: var(--brand-dark);
+  border-color: var(--brand-dark);
+  color: white;
+}
+.caption {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 12px 0 0;
+}
+.projectFlow {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0;
+  margin: 24px 0;
+}
+.projectFlow li {
+  position: relative;
+  margin: 0;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 18px;
+}
+.projectFlow li:nth-child(2) {
+  background: var(--soft);
+  border-color: #9fc5c5;
+}
+.flowNumber {
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--brand);
+  margin-bottom: 12px;
+}
+.projectFlow small {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  display: block;
+}
+.projectFlow strong {
+  display: block;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.traceGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 18px;
+}
+.traceCode {
+  background: #142b38;
+  color: #dceaf0;
+  border-radius: 7px;
+  margin: 0;
+  padding: 12px 12px 12px 36px;
+  overflow-x: auto;
+  font-size: 12px;
+}
+.traceCode li {
+  padding: 8px 5px;
+  margin: 0;
+  white-space: pre;
+}
+.traceCode li[data-active='true'] {
+  background: #32515a;
+  border-radius: 3px;
+  color: #d2ee64;
+}
+.traceCode li code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+.memory {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 15px;
+  min-width: 0;
+}
+.memory small,
+.result small,
+.console small {
+  display: block;
+  color: var(--brand);
+  font-size: 10px;
+  letter-spacing: 0.07em;
+}
+.memory > div {
+  padding: 8px 0;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  font-size: 13px;
+}
+.memory strong {
+  font-family: Consolas, monospace;
+  overflow-wrap: anywhere;
+}
+.memory p {
+  font-size: 13px;
+  margin-top: 10px;
+}
+.memory pre {
+  font-size: 12px;
+  margin: 8px 0 0;
+  padding: 10px;
+  white-space: pre-wrap;
+}
+.flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  font-size: 12px;
+  color: var(--brand-dark);
+  background: #f4f7f9;
+  padding: 12px;
+  border-radius: 6px;
+}
+.branchList {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+.branchList li {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 12px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 12px;
+}
+.branchList li code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+.branchList li[data-selected='true'] {
+  border-color: var(--brand);
+  border-left-width: 4px;
+  background: #eaf5f4;
+  color: var(--brand-dark);
+}
+.result {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 16px;
+  margin: 16px 0;
+}
+.result p {
+  margin: 7px 0 0;
+  font-size: 15px;
+}
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.controls label {
+  font-size: 13px;
+  color: var(--muted);
+}
+.controls input,
+.controls select {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  border: 1px solid #b9c9d1;
+  background: white;
+  padding: 9px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--ink);
+}
+.editorLabel {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+}
+.editor {
+  display: block;
+  width: 100%;
+  resize: vertical;
+  margin: 9px 0;
+  border: 1px solid #476373;
+  border-radius: 7px;
+  background: #142b38;
+  color: #e5eef2;
+  padding: 16px;
+  line-height: 1.8;
+  font:
+    13px/1.8 Consolas,
+    monospace;
+  tab-size: 2;
+  white-space: pre;
+  overflow: auto;
+}
+.feedback {
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 13px;
+}
+.feedback > strong {
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  color: var(--brand);
+}
+.feedback p {
+  margin: 8px 0 0;
+  overflow-wrap: anywhere;
+}
+.console {
+  margin-top: 16px;
+}
+.console pre {
+  margin: 8px 0 0;
+  font-size: 13px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding: 16px;
+}
+.error {
+  background: #fff2e9;
+  border-left: 3px solid #b87131;
+  padding: 12px;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.testCase {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.testCase > span {
+  display: inline-block;
+  color: var(--brand-dark);
+  font-weight: 650;
+  margin-right: 12px;
+}
+.testCase > code {
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.arrayItems {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.arrayItems li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 13px;
+}
+.emptyToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+.emptyToggle input {
+  accent-color: var(--brand);
+}
+@media (max-width: 600px) {
+  .projectFlow {
+    grid-template-columns: 1fr;
+  }
+  .projectFlow li {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    column-gap: 14px;
+    padding: 14px;
+  }
+  .flowNumber {
+    grid-row: span 2;
+    margin: 0;
+  }
+  .traceGrid,
+  .controls {
+    grid-template-columns: 1fr;
+  }
+  .demoBody {
+    padding: 14px;
+  }
+  .demo > figcaption {
+    padding: 12px 14px;
+  }
+  .branchList li {
+    grid-template-columns: 12px minmax(0, 1fr);
+    gap: 6px;
+  }
+  .branchList li > span:last-child {
+    grid-column: 2;
+  }
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+}
+.tabs button {
+  border: 0;
+  border-radius: 5px;
+  padding: 7px 18px;
+  background: transparent;
+  color: var(--muted);
+}
+.tabs button[aria-selected='true'] {
+  background: var(--brand-dark);
+  color: white;
+}
+.answerPanel {
+  font-size: 14px;
+}
+.answerPanel h3 {
+  font-size: 17px;
+  margin: 20px 0 10px;
+}
+.answerPanel p:last-child {
+  margin-bottom: 0;
+}
+
+.stepHeading {
+  font-size: 15px;
+  color: var(--brand-dark);
+  margin: 20px 0 12px;
+}
+.parameterInputs {
+  display: grid;
+  gap: 14px;
+}
+.nameParameter {
+  display: block;
+  font-size: 13px;
+}
+.nameParameter > input {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  padding: 9px 10px;
+  margin-top: 8px;
+  border: 1px solid #b9c9d1;
+  border-radius: 6px;
+}
+.parameter {
+  min-width: 0;
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+}
+.parameter legend {
+  font-size: 13px;
+  padding: 0 4px;
+}
+.parameter label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  margin: 7px 0;
+}
+.parameter input {
+  accent-color: var(--brand);
+  flex-shrink: 0;
+}
+.parameter:disabled {
+  color: var(--muted);
+  background: #f4f7f9;
+}
+
+.editorSurface {
+  position: relative;
+  margin: 9px 0;
+  overflow: hidden;
+  border: 1px solid #476373;
+  border-radius: 7px;
+  background: #142b38;
+}
+.editorSurface:focus-within {
+  outline: 3px solid #287bc1;
+  outline-offset: 2px;
+}
+.editorSurface .editor,
+.editorSurface .editorHighlight {
+  font:
+    13px/1.8 Consolas,
+    monospace;
+  font-variant-ligatures: none;
+  font-feature-settings:
+    'liga' 0,
+    'calt' 0;
+  letter-spacing: normal;
+  tab-size: 2;
+  padding: 16px;
+  border: 0;
+  margin: 0;
+  white-space: pre;
+}
+.editorSurface .editorHighlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: transparent;
+  color: #e5eef2;
+  border-radius: 0;
+}
+.editorSurface .editor {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  color: transparent;
+  caret-color: #e5eef2;
+  outline: none;
+}
+.editorSurface .editor::selection {
+  background: #3d647c88;
+  color: transparent;
+}
+@media (forced-colors: active) {
+  .editorSurface .editorHighlight {
+    display: none;
+  }
+  .editorSurface .editor {
+    color: CanvasText;
+    background: Canvas;
+    caret-color: CanvasText;
+  }
+}

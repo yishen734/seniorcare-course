@@ -1,0 +1,9 @@
+node_modules
+node_modules-incomplete
+public/compiler
+*.tar.gz
+.next
+out
+next-env.d.ts
+
+qa

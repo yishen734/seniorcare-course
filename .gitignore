@@ -1,0 +1,15 @@
+node_modules/
+node_modules-incomplete/
+public/compiler/
+*.tar.gz
+.next/
+.openai/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.env*
+!.env.example
+qa/
+data/
+references/hw2/
+projects/CNN/

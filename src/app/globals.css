@@ -1,0 +1,202 @@
+:root {
+  --ink: #172b38;
+  --muted: #526673;
+  --brand: #006d77;
+  --brand-dark: #004c57;
+  --accent: #d2ee64;
+  --paper: #fff;
+  --canvas: #f4f7f9;
+  --line: #dbe3e8;
+  --soft: #eaf5f4;
+  --warning: #83541a;
+  --radius: 12px;
+  --sidebar-width: 272px;
+  --reading-width: 860px;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--canvas);
+  font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+}
+main {
+  min-width: 0;
+}
+button {
+  border: 1px solid var(--line);
+  background: white;
+  color: var(--ink);
+  border-radius: 6px;
+  padding: 7px 13px;
+  font-size: 14px;
+}
+button:hover:not(:disabled) {
+  border-color: var(--brand);
+}
+figure {
+  margin: 24px 0;
+  min-width: 0;
+}
+input,
+select {
+  min-width: 0;
+  max-width: 100%;
+}
+p,
+li {
+  overflow-wrap: break-word;
+}
+li + li {
+  margin-top: 7px;
+}
+p code,
+li > code {
+  color: var(--brand-dark);
+  background: #e9f0f2;
+  border-radius: 4px;
+  padding: 2px 5px;
+  overflow-wrap: anywhere;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button,
+select,
+summary,
+input[type='range'] {
+  cursor: pointer;
+}
+button,
+a,
+input,
+select,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+a {
+  color: var(--brand);
+  text-underline-offset: 4px;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #287bc1;
+  outline-offset: 4px;
+}
+button:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.45;
+  letter-spacing: -0.025em;
+}
+p {
+  margin: 0 0 1em;
+}
+strong {
+  font-weight: 650;
+}
+code,
+pre {
+  font-family: 'Cascadia Code', Consolas, monospace;
+}
+/* Keep each operator character visible for students: ===, !==, =>. */
+code,
+pre,
+textarea {
+  font-variant-ligatures: none;
+  font-feature-settings:
+    'liga' 0,
+    'calt' 0;
+}
+code {
+  font-size: 0.92em;
+}
+pre {
+  overflow-x: auto;
+  background: #142b38;
+  color: #e0eff4;
+  padding: 24px;
+  border-radius: var(--radius);
+  line-height: 1.75;
+  font-size: 14px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+th,
+td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+th {
+  color: var(--muted);
+  font-weight: 600;
+  background: #f4f7f9;
+}
+details {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin: 16px 0;
+  background: var(--paper);
+}
+summary {
+  padding: 14px 18px;
+  color: var(--brand-dark);
+  font-weight: 600;
+}
+details > :not(summary) {
+  margin: 0 18px 18px;
+}
+svg {
+  max-width: 100%;
+  height: auto;
+}
+::selection {
+  background: #d2eea0;
+  color: #142b38;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@media print {
+  body {
+    background: white;
+    font-size: 11pt;
+  }
+  pre {
+    white-space: pre-wrap;
+  }
+  details {
+    break-inside: avoid;
+  }
+}

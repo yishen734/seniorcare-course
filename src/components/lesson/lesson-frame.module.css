@@ -1,0 +1,263 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 860px) 190px;
+  gap: 44px;
+  max-width: 1240px;
+  padding: 44px 44px 70px;
+  margin: auto;
+  align-items: start;
+}
+.article {
+  min-width: 0;
+}
+.tocGoal {
+  padding: 18px 14px;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 8px;
+  font-size: 11px;
+  color: var(--brand);
+}
+.tocGoal strong,
+.tocGoal span {
+  display: block;
+}
+.tocGoal strong {
+  color: var(--ink);
+  font-size: 14px;
+  margin: 8px 0;
+}
+.tocGoal span {
+  color: var(--muted);
+  font-size: 12px;
+}
+.plannedSections {
+  margin-top: 28px;
+}
+.plannedSection {
+  scroll-margin-top: 85px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.plannedSection h2 {
+  font-size: 17px;
+  margin: 0;
+  flex: 1;
+}
+.plannedSection h2 span {
+  font-size: 13px;
+  color: var(--brand);
+  margin-right: 12px;
+}
+.plannedSection small {
+  color: var(--muted);
+  white-space: nowrap;
+}
+.mobileToc {
+  display: none;
+}
+.mobileToc nav {
+  display: grid;
+  gap: 7px;
+  font-size: 14px;
+}
+.hero {
+  padding-bottom: 34px;
+}
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  color: var(--brand);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.eyebrow span {
+  color: var(--muted);
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+.hero h1 {
+  font-size: clamp(32px, 3.4vw, 46px);
+  margin: 16px 0 8px;
+  font-weight: 750;
+}
+.subtitle {
+  font-size: 20px;
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  font-size: 12px;
+  color: var(--muted);
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+.meta span::before {
+  content: '●';
+  color: var(--brand);
+  font-size: 7px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.intro {
+  margin: 24px 0;
+  font-size: 17px;
+}
+.heroActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-size: 14px;
+}
+.heroActions a {
+  text-decoration: none;
+}
+.heroActions a:first-child {
+  background: var(--brand-dark);
+  color: white;
+  border-radius: 6px;
+  padding: 10px 18px;
+}
+.heroActions span {
+  margin-left: 18px;
+}
+.toc {
+  position: sticky;
+  top: 30px;
+  padding-top: 8px;
+}
+.tocLabel {
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 0.07em;
+}
+.toc nav {
+  margin: 18px 0 24px;
+  border-left: 1px solid var(--line);
+}
+.toc nav a {
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--muted);
+  display: flex;
+  gap: 9px;
+  padding: 7px 0 7px 12px;
+  line-height: 1.7;
+}
+.toc nav a:hover {
+  color: var(--brand);
+  background: var(--soft);
+}
+.toc nav a span {
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.6;
+  padding-top: 2px;
+}
+.widePage {
+  max-width: 1060px;
+  padding: 44px;
+  margin: auto;
+}
+.curriculumGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.lessonCard {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.lessonCard h3 {
+  margin: 8px 0;
+  font-size: 19px;
+}
+.lessonCard p {
+  color: var(--muted);
+  font-size: 14px;
+}
+.lessonCard ul {
+  font-size: 14px;
+  padding-left: 20px;
+}
+.lessonCard a {
+  font-size: 14px;
+}
+.cardNumber {
+  font-size: 12px;
+  color: var(--brand);
+  letter-spacing: 0.08em;
+}
+.phaseTitle {
+  margin: 38px 0 18px;
+  font-size: 24px;
+}
+.checklist {
+  list-style: none;
+  padding: 0;
+}
+.checklist li {
+  margin: 12px 0;
+}
+.checklist label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.checklist input {
+  margin-top: 9px;
+  accent-color: var(--brand);
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+@media (max-width: 1220px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 950px;
+    padding: 36px;
+  }
+  .toc {
+    display: none;
+  }
+  .mobileToc {
+    display: block;
+  }
+}
+@media (max-width: 760px) {
+  .layout,
+  .widePage {
+    padding: 28px 20px 50px;
+  }
+  .curriculumGrid {
+    grid-template-columns: 1fr;
+  }
+  .subtitle {
+    font-size: 18px;
+  }
+  .eyebrow {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+@media print {
+  .layout {
+    display: block;
+    padding: 0;
+  }
+  .toc,
+  .heroActions {
+    display: none;
+  }
+}
